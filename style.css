@@ -144,6 +144,11 @@ nav {
 }
 
 .nav-links {
+  /* rem stands for relative em. em stands for em-height.
+  em is a unit of measurment that is based on the width of the
+  capital letter 'M' in the current font. rem is like em, except
+  the font it references in the font-size defined in the 
+  root element <html></html>.*/
   column-gap: 2rem; 
   list-style: none; /* This makes it so there are no bullet points*/
   font-size: 1.5rem; 
@@ -151,8 +156,8 @@ nav {
 
 a {
   color: black;
+  /* removes default underline for links*/
   text-decoration: none;
-  text-decoration-color: white;
 }
 
 a:hover {
@@ -252,7 +257,7 @@ a:hover {
 }
 
 .menu-links li {
-  /* removes the bullet points*/
+  /* removes the bullet points */
   list-style: none;
 }
 
@@ -283,3 +288,140 @@ a:hover {
 .hamburger-icon span:last-child {
   transform: none;
 }
+
+/* Now we have everything below the header */
+
+/* SECTIONS */
+
+section {
+  /* vh stand for view height. This unit is based on
+  the total height of the viewport. 4vh means the element
+  with the class section will have a height of 4% of the 
+  viewport. */
+  padding-top: 4vh;
+  height:96vh;
+  margin: 0 10rem; 
+
+  /* Specifies the width and height. border-box means
+  that the padding  and border are included in the size
+  of the elemet, rather than adding to the width and 
+  height */
+  box-sizing: border-box;
+
+  /* This means that even if the viewport gets really
+  small, the content will not get so small it starts
+  clipping out of the container element.*/
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+#profile {
+  display:flex;
+  justify-content: center;
+  /* gap between flex elements*/
+  gap: 5rem;
+  height: 80vh;
+  
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  /* REMEMBER: child elements do not inherit
+  flex. This is why this section is displayed
+  with block.*/
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius:2rem
+}
+
+.btn-color-1, .btn-color-2 {
+  background-color: white;
+  border: rgb(53,53,53) 0.1rem solid;
+
+}
+.btn-color-1:hover, .btn-color-2:hover {
+  cursor:pointer;
+  background-color: rgb(0,0,0);
+  color: white;
+  border: rgb(53,53,53) 0.1rem solid;
+
+}
+
+/*
+.btn-color-1, .btn-color-2:hover {
+  background: rgb(53,53,53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rbg(0,0,0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255,255,255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+*/
