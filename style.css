@@ -237,16 +237,22 @@ a:hover {
 }
 
 .menu-links a {
+  /* makes it so menu links and regular links take up the whole line*/
   display: block;
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
   color: black;
+  /* This removes the default underline decoration from the link*/
   text-decoration:none;
+
+  /*when css properties for these classes change, the change will transition
+  smoothly */
   transition: all 0.3 ease-in-out;
 }
 
 .menu-links li {
+  /* removes the bullet points*/
   list-style: none;
 }
 
