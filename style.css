@@ -573,3 +573,7 @@ footer {
 footer p {
   text-align: center;
 }
+
+.rounded-image {
+  border-radius: 50%;
+}
